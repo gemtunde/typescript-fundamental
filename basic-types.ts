@@ -74,3 +74,22 @@ function optional(name?: string) {
   }
 }
 optional("Welcome home");
+
+//using union data types to a variables enables it to take 2 or more data types as specified
+let myClub: string | number = "chelsea";
+myClub = 89;
+
+//union for function parameter
+//we can accept a parameter of diff types
+//but forces to treat each type differntly
+
+function printId(id: string | number | boolean) {
+  if (typeof id === "string") {
+    console.log(id.toUpperCase());
+  } else if (typeof id === "number") {
+    console.log(id * 5);
+  } else {
+    console.log(id);
+  }
+}
+printId("five");
